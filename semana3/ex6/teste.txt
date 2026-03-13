@@ -1,0 +1,7 @@
+float altura;
+String nome = "jose";
+cout << "Ola mundo";
+
+while(i <= 10){
+		idade = 15;		
+}

@@ -6,6 +6,17 @@
 %column
 %class Scanner
 
+letra = [A-Za-z]
+digito = [0-9]
+digitos = {digito}{digito}*
+ident = {letra}({letra}|{digito})*
+tipoVariavel = {kw_int}|{kw_float}|{kw_double}|{kw_char}|{kw_string}|{kw_bool}
+declaracaoVariavel = {tipoVariavel}{espaco}{ident}";"
+
+fimdeLinha = \r|\n|\r\n
+branco = " "
+espaco = ({fimdeLinha}|[ \t]|{branco})*
+
 kw_if = "if"
 kw_else = "else"
 kw_while = "while"
@@ -19,6 +30,8 @@ kw_bool = "boolean"
 kw_print = "print"
 
 %%
+
+{declaracaoVariavel} {System.out.println("<declaracaoVar: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" ); }
 
 {kw_if} {System.out.println("<if: " + yytext() + ", linha:" + yyline + ", coluna:" + yycolumn + ">" ); }
 

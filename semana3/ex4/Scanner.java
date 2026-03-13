@@ -32,9 +32,10 @@ class Scanner {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\141\0\1\14\1\17\1\20\1\15\1\3\1\2\1\21\1\7\1\1"+
-    "\2\0\1\4\1\0\1\12\1\10\1\22\1\0\1\11\1\5\1\13"+
-    "\1\16\1\0\1\6\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uff98\0";
+    "\11\0\1\4\1\4\2\0\1\4\22\0\1\4\17\0\12\2\1\0"+
+    "\1\3\5\0\32\1\6\0\1\20\1\23\1\24\1\21\1\7\1\6"+
+    "\1\25\1\13\1\5\2\1\1\10\1\1\1\16\1\14\1\26\1\1"+
+    "\1\15\1\11\1\17\1\22\1\1\1\12\3\1\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uff95\0";
 
   /** 
    * Translates characters to character classes
@@ -47,12 +48,12 @@ class Scanner {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\12\1\1\2\12\0\1\3\1\0\1\4\10\0"+
-    "\1\5\4\0\1\6\1\0\1\7\1\0\1\10\2\0"+
-    "\1\11\1\12\1\13\1\0\1\14";
+    "\1\0\12\1\1\2\12\0\1\3\1\0\1\4\12\0"+
+    "\1\5\4\0\1\6\1\0\1\7\1\10\1\0\1\11"+
+    "\2\0\1\12\1\13\1\14\1\0\1\15";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[50];
+    int [] result = new int[53];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -77,16 +78,16 @@ class Scanner {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\23\0\46\0\71\0\114\0\137\0\162\0\205"+
-    "\0\230\0\253\0\276\0\23\0\321\0\344\0\367\0\u010a"+
-    "\0\u011d\0\u0130\0\u0143\0\u0156\0\u0169\0\u017c\0\23\0\u018f"+
-    "\0\23\0\u01a2\0\u01b5\0\u01c8\0\u01db\0\u01ee\0\u0201\0\u0214"+
-    "\0\u0227\0\23\0\u023a\0\u024d\0\u0260\0\u0273\0\23\0\u0286"+
-    "\0\23\0\u0299\0\23\0\u02ac\0\u02bf\0\23\0\23\0\23"+
-    "\0\u02d2\0\23";
+    "\0\0\0\27\0\56\0\105\0\134\0\163\0\212\0\241"+
+    "\0\270\0\317\0\346\0\27\0\375\0\u0114\0\u012b\0\u0142"+
+    "\0\u0159\0\u0170\0\u0187\0\u019e\0\u01b5\0\u01cc\0\u01e3\0\u01fa"+
+    "\0\27\0\u0211\0\u0228\0\u023f\0\u0256\0\u026d\0\u0284\0\u029b"+
+    "\0\u02b2\0\u01e3\0\u02c9\0\27\0\u02e0\0\u02f7\0\u030e\0\u0325"+
+    "\0\u01e3\0\u033c\0\27\0\u01e3\0\u0353\0\27\0\u036a\0\u0381"+
+    "\0\27\0\u01e3\0\u01e3\0\u0398\0\u01e3";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[50];
+    int [] result = new int[53];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -109,21 +110,22 @@ class Scanner {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\4\1\5\1\2\1\6\1\7\6\2"+
-    "\1\10\1\2\1\11\1\12\1\2\1\13\25\0\1\14"+
-    "\7\0\1\15\14\0\1\16\3\0\1\17\16\0\1\20"+
-    "\31\0\1\21\16\0\1\22\23\0\1\23\22\0\1\24"+
-    "\21\0\1\25\24\0\1\26\24\0\1\27\17\0\1\30"+
-    "\23\0\1\31\16\0\1\32\26\0\1\33\12\0\1\34"+
-    "\37\0\1\35\14\0\1\36\26\0\1\37\7\0\1\40"+
-    "\35\0\1\41\11\0\1\42\20\0\1\43\25\0\1\44"+
-    "\35\0\1\45\7\0\1\46\27\0\1\47\23\0\1\50"+
-    "\23\0\1\51\21\0\1\52\13\0\1\53\23\0\1\54"+
-    "\21\0\1\55\32\0\1\56\30\0\1\57\4\0\1\60"+
-    "\33\0\1\61\20\0\1\62\10\0";
+    "\5\2\1\3\1\4\1\5\1\2\1\6\1\7\6\2"+
+    "\1\10\1\2\1\11\1\12\1\2\1\13\35\0\1\14"+
+    "\7\0\1\15\20\0\1\16\3\0\1\17\22\0\1\20"+
+    "\35\0\1\21\22\0\1\22\27\0\1\23\26\0\1\24"+
+    "\25\0\1\25\30\0\1\26\30\0\1\27\23\0\1\30"+
+    "\27\0\1\31\22\0\1\32\32\0\1\33\16\0\1\34"+
+    "\43\0\1\35\20\0\1\36\32\0\1\37\13\0\1\40"+
+    "\22\0\1\41\2\0\1\42\22\41\20\0\1\43\15\0"+
+    "\1\44\24\0\1\45\31\0\1\46\41\0\1\47\13\0"+
+    "\1\50\33\0\1\51\27\0\1\52\11\0\2\41\1\53"+
+    "\1\0\22\41\17\0\1\54\25\0\1\55\17\0\1\56"+
+    "\27\0\1\57\25\0\1\60\36\0\1\61\34\0\1\62"+
+    "\10\0\1\63\37\0\1\64\24\0\1\65\10\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[741];
+    int [] result = new int[943];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -161,12 +163,12 @@ class Scanner {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\11\1\1\11\12\0\1\11\1\0\1\11"+
-    "\10\0\1\11\4\0\1\11\1\0\1\11\1\0\1\11"+
-    "\2\0\3\11\1\0\1\11";
+    "\1\0\1\11\11\1\1\11\12\0\1\1\1\0\1\11"+
+    "\12\0\1\11\4\0\1\1\1\0\1\11\1\1\1\0"+
+    "\1\11\2\0\1\11\2\1\1\0\1\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[50];
+    int [] result = new int[53];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -262,7 +264,7 @@ class Scanner {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 80) {
+    while (i < 108) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -616,62 +618,67 @@ class Scanner {
             { System.out.print(yytext());
             } 
             // fall through
-          case 13: break;
+          case 14: break;
           case 2: 
             { System.out.println("<if: " + yytext() + ", linha:" + yyline + ", coluna:" + yycolumn + ">" );
             } 
             // fall through
-          case 14: break;
+          case 15: break;
           case 3: 
             { System.out.println("<int: " + yytext()+ ", linha:" + yyline + ", coluna:" + yycolumn + ">" );
             } 
             // fall through
-          case 15: break;
+          case 16: break;
           case 4: 
             { System.out.println("<for: " + yytext() + ", linha: " + yyline + ", coluna: " + yycolumn + ">>");
             } 
             // fall through
-          case 16: break;
+          case 17: break;
           case 5: 
             { System.out.println("<else: " + yytext() + ", linha: " + yyline + ", coluna: " + yycolumn + ">>");
             } 
             // fall through
-          case 17: break;
+          case 18: break;
           case 6: 
             { System.out.println("<char: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" );
             } 
             // fall through
-          case 18: break;
-          case 7: 
-            { System.out.println("<float: " + yytext() + ", linha:" + yyline + ", coluna:" + yycolumn + ">" );
-            } 
-            // fall through
           case 19: break;
-          case 8: 
-            { System.out.println("<while: " + yytext() + ", linha:" + yyline + ", coluna:" + yycolumn + ">" );
+          case 7: 
+            { System.out.println("<declaracaoVar: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" );
             } 
             // fall through
           case 20: break;
-          case 9: 
-            { System.out.println("<print: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" );
+          case 8: 
+            { System.out.println("<float: " + yytext() + ", linha:" + yyline + ", coluna:" + yycolumn + ">" );
             } 
             // fall through
           case 21: break;
-          case 10: 
-            { System.out.println("<string: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" );
+          case 9: 
+            { System.out.println("<while: " + yytext() + ", linha:" + yyline + ", coluna:" + yycolumn + ">" );
             } 
             // fall through
           case 22: break;
-          case 11: 
-            { System.out.println("<double: " + yytext() + ", linha:" + yyline + ", coluna:" + yycolumn + ">" );
+          case 10: 
+            { System.out.println("<print: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" );
             } 
             // fall through
           case 23: break;
-          case 12: 
-            { System.out.println("<bool: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" );
+          case 11: 
+            { System.out.println("<string: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" );
             } 
             // fall through
           case 24: break;
+          case 12: 
+            { System.out.println("<double: " + yytext() + ", linha:" + yyline + ", coluna:" + yycolumn + ">" );
+            } 
+            // fall through
+          case 25: break;
+          case 13: 
+            { System.out.println("<bool: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" );
+            } 
+            // fall through
+          case 26: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

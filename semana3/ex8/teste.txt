@@ -1,0 +1,10 @@
+string nome = "jose";
+cout << "Meu nome é" << nome;
+
+float altura;
+string curso = "Computacao";
+cout << "Ola mundo";
+
+while(i <= 10){
+		idade = -15.0E4;		
+}

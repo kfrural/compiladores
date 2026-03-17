@@ -112,4 +112,3 @@ simbolo = {op_atributo}|{leftpar}|{rightpar}|{leftkey}|{rightkey}|{ponto}|{virgu
 {hexadecimal} {System.out.println("[" + yyline + "," + yycolumn + "]" + " num_hexadecimal: " + yytext()); }
 
 {comentarioG} {System.out.println("[" + yyline + "," + yycolumn + "]" + " comentario_grande: " + yytext()); }
-

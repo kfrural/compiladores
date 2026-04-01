@@ -51,6 +51,7 @@ espaco = ({fimdeLinha}|[ \t]|{branco})*
 qualquerLetra = .
 texto = {qualquerLetra}*
 comentarioG = "/*"~"*/"
+comentarioG_alternativo = "/*" [^*]* "*"+ ([^/*] [^*]* "*"+)* "/"
 msgTela = {kw_cout}{espaco}{kw_concat}{espaco}{texto}
 
 op_atributo = "="

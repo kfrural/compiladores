@@ -20,9 +20,23 @@ expr ::=	INTEIRO:n MAIS expr:e
 			  | INTEIRO:n MULT expr:e
 					{: RESULT = new Double(n.doubleValue() * e.doubleValue()); :}
 			  | INTEIRO:n DIV expr:e
-					{: RESULT = new Double(n.doubleValue() / e.doubleValue()); :}
+              		{:
+                        if (e.doubleValue() == 0.0) {
+                            System.err.println("Erro: Divisão por zero!");
+                            RESULT = new Double(0.0);
+                        } else {
+                            RESULT = new Double(n.doubleValue() / e.doubleValue());
+                        }
+              		:}
 			  | INTEIRO:n MOD expr:e
-					{: RESULT = new Double(n.doubleValue() % e.doubleValue()); :}
+              		{:
+              		    if (e.doubleValue() == 0.0) {
+              		        System.err.println("Erro: Módulo por zero!");
+              		        RESULT = new Double(0.0);
+              		    } else {
+              		        RESULT = new Double(n.doubleValue() % e.doubleValue());
+              		    }
+              		:}
 			  | INTEIRO:n
 			    {: RESULT = new Double(n.doubleValue()); :}
 			  | ABRE_PAREN expr:e FECHA_PAREN

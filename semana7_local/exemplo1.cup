@@ -1,0 +1,44 @@
+import java_cup.runtime.*;
+
+terminal PTVIRG, MAIS, MENOS, DIV, MULT, MOD, ABRE_PAREN, FECHA_PAREN, ERROR;
+terminal Double INTEIRO;
+non terminal Double expr_list, expr_ptv;
+non terminal Double expr;
+
+expr_list ::=	expr_list expr_ptv
+					  | expr_ptv;
+
+expr_ptv ::=	expr:e {: System.out.println("Resultado = " + e); :} PTVIRG
+			  | error PTVIRG  {: System.out.println("Ignorou erro"); :}
+			  | expr PTVIRG   /* permite múltiplos expr */
+			  ;
+
+expr ::=	INTEIRO:n MAIS expr:e
+					{: RESULT = n + e; :}
+			  | INTEIRO:n MENOS expr:e
+					{: RESULT = n - e; :}
+			  | INTEIRO:n MULT expr:e
+					{: RESULT = new Double(n.doubleValue() * e.doubleValue()); :}
+			  | INTEIRO:n DIV expr:e
+              		{:
+                        if (e.doubleValue() == 0.0) {
+                            System.err.println("Erro: Divisão por zero!");
+                            RESULT = new Double(0.0);
+                        } else {
+                            RESULT = new Double(n.doubleValue() / e.doubleValue());
+                        }
+              		:}
+			  | INTEIRO:n MOD expr:e
+              		{:
+              		    if (e.doubleValue() == 0.0) {
+              		        System.err.println("Erro: Módulo por zero!");
+              		        RESULT = new Double(0.0);
+              		    } else {
+              		        RESULT = new Double(n.doubleValue() % e.doubleValue());
+              		    }
+              		:}
+			  | INTEIRO:n
+			    {: RESULT = new Double(n.doubleValue()); :}
+			  | ABRE_PAREN expr:e FECHA_PAREN
+                {: RESULT = e; :}
+  ;
